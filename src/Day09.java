@@ -2,13 +2,17 @@ import java.util.*;
 
 public class Day09 {
 
-	public static String input = "day09input.txt";
+	public static String input = "input/day09.txt";
 
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		List<Integer> nums = new ArrayList<>(); 
 		Set<Integer> prevs = new HashSet<>();
@@ -44,7 +48,7 @@ public class Day09 {
 //		System.out.println();
 //	}
 	
-	public static void partB() {
+	public static void part2() {
 		long target = 88311122;
 		
 		Scanner s = AOC.getScanner(input);

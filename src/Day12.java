@@ -3,20 +3,23 @@ import java.util.*;
 
 public class Day12 {
 
-	public static String input = "day12input.txt";
+	public static String input = "input/day12.txt";
 
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		Point position = new Point();
 		int dir = 1;
 		char[] dirs = new char[] {'N', 'E', 'S', 'W'};
 		while (s.hasNextLine()) {
 			String line = s.nextLine();
-//			System.out.println(line);
 			char c = line.charAt(0);
 			int n = Integer.parseInt(line.substring(1));
 			if (c == 'R') {
@@ -45,20 +48,18 @@ public class Day12 {
 					position.x -= n;
 					break;
 			}
-//			System.out.println(position);
 		}
 		System.out.println(Math.abs(position.x) + Math.abs(position.y));
 		
 		s.close();
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		Scanner s = AOC.getScanner(input);
 		Point position = new Point();
 		Point waypoint = new Point(10, 1);
 		while (s.hasNextLine()) {
 			String line = s.nextLine();
-//			System.out.println(line);
 			char c = line.charAt(0);
 			int n = Integer.parseInt(line.substring(1));
 			
@@ -90,7 +91,6 @@ public class Day12 {
 					waypoint.x -= n;
 					break;
 			}
-//			System.out.println(position);
 		}
 		System.out.println(Math.abs(position.x) + Math.abs(position.y));
 		

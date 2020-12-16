@@ -2,17 +2,19 @@ import java.util.*;
 
 public class Day05 {
 
-	public static String input = "day05input.txt";
+	public static String input = "input/day05.txt";
 
 	public static void main(String[] args) {
-		partA();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		int max = 0;
-		
-//		List<Integer> allIds = new ArrayList<>();
 		
 		while (s.hasNextLine()) {
 			String line = s.nextLine();
@@ -20,15 +22,8 @@ public class Day05 {
 			int col = getTarget(line.substring(7), 8, 'R');
 			
 			int seatId = row * 8 + col;
-//			allIds.add(seatId);
 			if (seatId > max) max = seatId;
 		}
-		
-//		System.out.println(max);
-//		Collections.sort(allIds);
-//		for (int a : allIds) {
-//			System.out.println(a);
-//		}
 		
 		s.close();
 	}
@@ -44,7 +39,7 @@ public class Day05 {
 		return start;
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		Set<Integer> seats = new HashSet<>();
 		for (int i = 0; i <= 963; i++) {
 			seats.add(i);

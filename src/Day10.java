@@ -2,14 +2,17 @@ import java.util.*;
 
 public class Day10 {
 
-	public static String input = "day10input.txt";
-
+	public static String input = "input/day10.txt";
 
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		List<Integer> adapters = new ArrayList<>();
 		while (s.hasNextLine()) {
@@ -28,7 +31,7 @@ public class Day10 {
 		s.close();
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		Scanner s = AOC.getScanner(input);
 		List<Integer> adapters = new ArrayList<>();
 		adapters.add(0);

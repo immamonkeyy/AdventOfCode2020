@@ -2,28 +2,17 @@ import java.util.*;
 
 public class Day16 {
 
-	public static String input = "day16input.txt";
+	public static String input = "input/day16.txt";
 
 	public static void main(String[] args) {
 		final long startTime = System.currentTimeMillis();
-		run();
-		final long endTime = System.currentTimeMillis();
 		
-		double millis = endTime - startTime;
-		double seconds = millis / 1000;
-		double minutes = seconds / 60;
+		part2();
 		
-		System.out.println("\nTotal execution time:");
-		System.out.println(millis + " millis");
-		System.out.println(seconds + " seconds");
-		System.out.println(minutes + " minutes");
+		AOC.endTime(startTime);
 	}
 	
-	public static void run() {
-		partB();
-	}
-	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		String line = s.nextLine();
 		Set<Integer> valid = new HashSet<>();
@@ -54,7 +43,7 @@ public class Day16 {
 		s.close();
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		Scanner s = AOC.getScanner(input);
 		String line = s.nextLine();
 		Map<String, Set<Integer>> rules = new HashMap<>();
@@ -150,3 +139,4 @@ public class Day16 {
 		return true;
 	}
 }
+

@@ -2,13 +2,17 @@ import java.util.*;
 
 public class Day11 {
 
-	public static String input = "day11input.txt";
+	public static String input = "input/day11.txt";
 
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		List<String> input = new ArrayList<>();
 		while (s.hasNextLine()) {
@@ -86,7 +90,7 @@ public class Day11 {
 		return count;
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		Scanner s = AOC.getScanner(input);
 		List<String> input = new ArrayList<>();
 		while (s.hasNextLine()) {
@@ -110,7 +114,7 @@ public class Day11 {
 				for (int j = 0; j < grid1[i].length; j++) {
 					grid2[i][j] = grid1[i][j];
 					if (grid1[i][j] != '.') {
-						int occ = countOccB(grid1, i, j);
+						int occ = countOcc2(grid1, i, j);
 						if (grid1[i][j] == 'L' && occ == 0) {
 							grid2[i][j] = '#';
 							change = true;
@@ -137,7 +141,7 @@ public class Day11 {
 		s.close();
 	}
 	
-	public static int countOccB(char[][] grid, int i, int j) {
+	public static int countOcc2(char[][] grid, int i, int j) {
 		int count = 0;
 		int[] dirs = new int[] {-1, 0, 1};
 		for (int di : dirs) {

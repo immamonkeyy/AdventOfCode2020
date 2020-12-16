@@ -5,13 +5,17 @@ import java.util.Set;
 
 public class Day06 {
 
-	public static String input = "day06input.txt";
+	public static String input = "input/day06.txt";
 
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		int sum = 0;
 		Set<Character> qs = new HashSet<>();
@@ -31,7 +35,7 @@ public class Day06 {
 		s.close();
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		Scanner s = AOC.getScanner(input);
 		int sum = 0;
 		Set<Character> qs = new HashSet<>();

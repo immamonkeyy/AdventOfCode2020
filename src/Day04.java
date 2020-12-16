@@ -6,13 +6,17 @@ import java.util.function.Predicate;
 
 public class Day04 {
 
-	public static String input = "day04input.txt";
+	public static String input = "input/day04.txt";
 
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		int valid = 0;
 		Map<String, String> map = new HashMap<>();
@@ -39,7 +43,7 @@ public class Day04 {
 		s.close();
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		Scanner s = AOC.getScanner(input);
 		int valid = 0;
 		Map<String, String> map = new HashMap<>();

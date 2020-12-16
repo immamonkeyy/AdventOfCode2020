@@ -1,23 +1,18 @@
 import java.util.*;
 
 public class Day15 {
-
-	public static String input = "day15input.txt";
+	
+	public static String input = "input/day15.txt";
 
 	public static void main(String[] args) {
 		final long startTime = System.currentTimeMillis();
 		
-		partA();
+		part1();
 		
-		final long endTime = System.currentTimeMillis();
-		double seconds = (endTime - startTime) / 1000.0;
-		double minutes = seconds / 60;
-		System.out.println("\nTotal execution time:");
-		System.out.println(seconds + " seconds");
-		System.out.println(minutes + " minutes");
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		
 		// num --> most recent turn it was spoken
@@ -52,7 +47,5 @@ public class Day15 {
 		s.close();
 	}
 	
-	public static void partB() {
-		// modified partA
-	}
+	//part 2 modified part 1
 }

@@ -13,4 +13,16 @@ public class AOC {
 		}
 	}
 
+	public static void endTime(long startTime) {
+		final long endTime = System.currentTimeMillis();
+		
+		double millis = endTime - startTime;
+		double seconds = millis / 1000;
+		double minutes = seconds / 60;
+		
+		System.out.println("\nTotal execution time:");
+		System.out.println(millis + " millis");
+		System.out.println(seconds + " seconds");
+		System.out.println(minutes + " minutes");
+	}
 }

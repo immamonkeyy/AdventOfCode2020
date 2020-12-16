@@ -2,13 +2,17 @@ import java.util.*;
 
 public class Day13 {
 
-	public static String input = "day13input.txt";
+	public static String input = "input/day13.txt";
 
 	public static void main(String[] args) {
-		partBv2();
+		final long startTime = System.currentTimeMillis();
+		
+		part2v2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		
 		int yourTime = Integer.parseInt(s.nextLine());
@@ -33,7 +37,7 @@ public class Day13 {
 		s.close();
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		Scanner s = AOC.getScanner(input);
 		
 		s.nextLine(); // throw away first line
@@ -77,7 +81,7 @@ public class Day13 {
 		s.close();
 	}
 	
-	public static void partBv2() {
+	public static void part2v2() {
 		Scanner s = AOC.getScanner(input);
 		
 		s.nextLine(); // throw away first line

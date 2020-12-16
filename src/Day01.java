@@ -6,14 +6,18 @@ import java.util.Set;
 
 public class Day01 {
 	
-	public static String input = "day01input.txt";
+	public static String input = "input/day01.txt";
 	public static int target = 2020;
 	
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		Set<Integer> nums = new HashSet<>();
 		while (s.hasNextInt()) {
@@ -27,7 +31,7 @@ public class Day01 {
 		s.close();
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		Scanner s = AOC.getScanner(input);
 		Set<Integer> nums = new HashSet<>();
 		while (s.hasNextInt()) {

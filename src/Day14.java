@@ -2,13 +2,17 @@ import java.util.*;
 
 public class Day14 {
 
-	public static String input = "day14input.txt";
+	public static String input = "input/day14.txt";
 
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		char[] mask = new char[0];
 		Map<Integer, Long> mem = new HashMap<>();
@@ -52,7 +56,7 @@ public class Day14 {
 		return new String(newString);
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		Scanner s = AOC.getScanner(input);
 		char[] mask = new char[0];
 		Map<Long, Integer> mem = new HashMap<>();

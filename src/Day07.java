@@ -6,17 +6,21 @@ import java.util.HashMap;
 
 public class Day07 {
 
-	public static String input = "day07input.txt";
+	public static String input = "input/day07.txt";
 	
 	//map of color -> colors it can be in
 	//set of allowed colors to be in
 
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
 	//bright teal bag contain 4 shiny crimson bag, 3 faded red bag, 2 posh lavender bag.
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		Map<String, Set<String>> rules = new HashMap<>();
 		
@@ -88,7 +92,7 @@ public class Day07 {
 	}
 	
 	// outer -> inner
-	public static void partB() {
+	public static void part2() {
 		Scanner s = AOC.getScanner(input);
 		Map<String, Set<String>> rules = new HashMap<>();
 		

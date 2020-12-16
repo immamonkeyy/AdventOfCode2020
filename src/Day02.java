@@ -2,16 +2,20 @@ import java.util.Scanner;
 
 public class Day02 {
 	
-	public static String input = "day02input.txt";
+	public static String input = "input/day02.txt";
 	
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
 	// 1-3 a: abcde
 	// 1-3 b: cdefg
 	// 2-9 c: ccccccccc
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		int valid = 0;
 		while (s.hasNextLine()) {
@@ -31,7 +35,7 @@ public class Day02 {
 		s.close();
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		System.out.println("Start");
 		Scanner s = AOC.getScanner(input);
 		int valid = 0;

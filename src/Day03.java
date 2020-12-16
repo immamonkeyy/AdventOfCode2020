@@ -2,13 +2,17 @@ import java.util.Scanner;
 
 public class Day03 {
 	
-	public static String input = "day03input.txt";
+	public static String input = "input/day03.txt";
 
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		Scanner s = AOC.getScanner(input);
 		int x = 0;
 		int trees = 0;
@@ -20,7 +24,7 @@ public class Day03 {
 		System.out.println(trees);
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		long product = 1;
 		product *= getTrees(1, 1);
 		product *= getTrees(3, 1);

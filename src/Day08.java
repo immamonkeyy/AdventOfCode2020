@@ -4,14 +4,18 @@ import java.util.ArrayList;
 
 public class Day08 {
 
-	public static String input = "day08input.txt";
+	public static String input = "input/day08.txt";
 	
 
 	public static void main(String[] args) {
-		partB();
+		final long startTime = System.currentTimeMillis();
+		
+		part2();
+		
+		AOC.endTime(startTime);
 	}
 	
-	public static void partA() {
+	public static void part1() {
 		List<Instruction> instructions = new ArrayList<>();
 		Scanner s = AOC.getScanner(input);
 		while (s.hasNextLine()) {
@@ -43,7 +47,7 @@ public class Day08 {
 		s.close();
 	}
 	
-	public static void partB() {
+	public static void part2() {
 		List<Instruction> instructions = new ArrayList<>();
 		Scanner s = AOC.getScanner(input);
 		while (s.hasNextLine()) {
